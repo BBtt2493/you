@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone Mockup (v1 - v8)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #0f0f0f;
+        }
+
+        /* Header จำลอง */
+        header {
+            background-color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo {
+            color: #ff0000;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* ส่วนเนื้อหาหลัก */
+        .container {
+            display: flex;
+            max-width: 1280px;
+            margin: 20px auto;
+            padding: 0 20px;
+            gap: 24px;
+        }
+
+        /* ฝั่งเล่นวิดีโอหลัก */
+        .main-content {
+            flex: 2;
+        }
+
+        .video-player-container {
+            position: relative;
+            padding-bottom: 56.25%; /* อัตราส่วน 16:9 */
+            height: 0;
+            background-color: #000;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .video-player-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-info {
+            margin-top: 12px;
+        }
+
+        .video-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* ฝั่งรายการวิดีโอแนะนำด้านข้าง */
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-height: 80vh;
+            overflow-y: auto; /* เพิ่ม Scrollbar ด้านข้างเผื่อวิดีโอเยอะ */
+            padding-right: 5px;
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .video-item {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+            background: #fff;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .video-item:hover {
+            background: #e5e5e5;
+        }
+
+        /* กล่องจำลองรูป Thumbnail */
+        .thumbnail-mock {
+            width: 120px;
+            height: 68px;
+            background-color: #606060;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .item-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .item-title {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .item-author {
+            font-size: 12px;
+            color: #606060;
+        }
+
+        /* ตอบสนองต่อหน้าจอมือถือ */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                max-height: none;
+                overflow-y: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">MyYouTube</a>
+    </header>
+
+    <div class="container">
+        
+        <main class="main-content">
+            <div class="video-player-container">
+                <video id="mainVideo" controls autoplay muted src="v1.mp4"></video>
+            </div>
+            <div class="video-info">
+                <h1 id="mainVideoTitle" class="video-title">กำลังเล่น: v1</h1>
+                <p style="color: #606060; font-size: 14px;">ยอดดู 0 ครั้ง • 31 พ.ค. 2026</p>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <h2 class="sidebar-title">วิดีโอแนะนำ</h2>
+            
+            <div class="video-item" onclick="changeVideo('v1.mp4', 'v1')">
+                <div class="thumbnail-mock">v1</div>
+                <div class="item-info">
+                    <p class="item-title">วิดีโอชื่อ v1</p>
+                    <p class="item-author">My Channel</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v2.mp4', 'v2')">
+                <div class="thumbnail-mock">v2</div>
+                <div class="item-info">
+                    <p class="item-title">วิดีโอชื่อ v2</p>
+                    <p class="item-author">My Channel</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v3.mp4', 'v3')">
+                <div class="thumbnail-mock">v3</div>
+                <div class="item-info">
+                    <p class="item-title">วิดีโอชื่อ v3</p>
+                    <p class="item-author">My Channel</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v4.mp4', 'v4')">
+                <div class="thumbnail-mock">v4</div>
+                <div class="item-info">
+                    <p class="item-title">วิดีโอชื่อ v4</p>
+                    <p class="item-author">My Channel</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v5.mp4', 'v5')">
+                <div class="thumbnail-mock">v5</div>
+                <div class="item-info">
+                    <p class="item-title">วิดีโอชื่อ v5</p>
+                    <p class="item-author">My Channel</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v6.mp4', 'v6')">
+                <div class="thumbnail-mock" style="background-color: #e65100;">v6</div>
+                <div class="item-info">
+                    <p class="item-title">วิดีโอชื่อ v6</p>
+                    <p class="item-author">My Channel</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v7.mov', 'v7.mov')">
+                <div class="thumbnail-mock" style="background-color: #006064;">v7</div>
+                <div class="item-info">
+                    <p class="item-title">วิดีโอชื่อ v7.mov</p>
+                    <p class="item-author">My Channel</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v8.mp4', 'v8')">
+                <div class="thumbnail-mock" style="background-color: #1a237e;">v8</div>
+                <div class="item-info">
+                    <p class="item-title">วิดีโอชื่อ v8</p>
+                    <p class="item-author">My Channel</p>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <script>
+        function changeVideo(videoSrc, videoName) {
+            const videoPlayer = document.getElementById('mainVideo');
+            const videoTitle = document.getElementById('mainVideoTitle');
+            
+            videoPlayer.src = videoSrc;
+            videoTitle.textContent = "กำลังเล่น: " + videoName;
+            
+            videoPlayer.play();
+        }
+    </script>
+
+</body>
+</html>

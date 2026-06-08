@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Clone with Video Preview</title>
+    <title>YouTube Clone with Video Preview (v1 - v26)</title>
     <style>
         * {
             box-sizing: border-box;
@@ -108,7 +108,7 @@
             background: #e5e5e5;
         }
 
-        /* ส่วนกล่องเปลี่ยนจากสีพื้นเป็นกล่องสำหรับแสดงวิดีโอพรีวิวขนาดเล็ก */
+        /* ส่วนกล่องสำหรับแสดงวิดีโอพรีวิวขนาดเล็ก */
         .thumbnail-box {
             width: 140px;
             height: 78px;
@@ -170,7 +170,7 @@
             </div>
             <div class="video-info">
                 <h1 id="mainVideoTitle" class="video-title">กำลังเล่น: v1</h1>
-                <p style="color: #606060; font-size: 14px;">ยอดดู 0 ครั้ง • 3 มิ.ย. 2026</p>
+                <p style="color: #606060; font-size: 14px;">ยอดดู 0 ครั้ง • 8 มิ.ย. 2026</p>
             </div>
         </main>
 
@@ -181,57 +181,46 @@
                 <div class="thumbnail-box"><video src="v1.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v1</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v2.mp4', 'v2')">
                 <div class="thumbnail-box"><video src="v2.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v2</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v3.mp4', 'v3')">
                 <div class="thumbnail-box"><video src="v3.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v3</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v4.mp4', 'v4')">
                 <div class="thumbnail-box"><video src="v4.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v4</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v5.mp4', 'v5')">
                 <div class="thumbnail-box"><video src="v5.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v5</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v6.mp4', 'v6')">
                 <div class="thumbnail-box"><video src="v6.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v6</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v7.mov', 'v7.mov')">
                 <div class="thumbnail-box"><video src="v7.mov" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v7.mov</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v8.mp4', 'v8')">
                 <div class="thumbnail-box"><video src="v8.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v8</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v9.mov', 'v9.mov')">
                 <div class="thumbnail-box"><video src="v9.mov" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v9.mov</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v10.mp4', 'v10')">
                 <div class="thumbnail-box"><video src="v10.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v10</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v12.mp4', 'v12')">
                 <div class="thumbnail-box"><video src="v12.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v12</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v13.mp4', 'v13')">
                 <div class="thumbnail-box"><video src="v13.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v13</p><p class="item-author">My Channel</p></div>
@@ -241,30 +230,60 @@
                 <div class="thumbnail-box"><video src="v14.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v14</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v15.mp4', 'v15')">
                 <div class="thumbnail-box"><video src="v15.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v15</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v16.mov', 'v16.mov')">
                 <div class="thumbnail-box"><video src="v16.mov" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v16.mov</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v17.mp4', 'v17')">
                 <div class="thumbnail-box"><video src="v17.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v17</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v18.mp4', 'v18')">
                 <div class="thumbnail-box"><video src="v18.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v18</p><p class="item-author">My Channel</p></div>
             </div>
-
             <div class="video-item" onclick="changeVideo('v19.mp4', 'v19')">
                 <div class="thumbnail-box"><video src="v19.mp4" muted loop></video></div>
                 <div class="item-info"><p class="item-title">วิดีโอชื่อ v19</p><p class="item-author">My Channel</p></div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v20.mp4', 'v20')">
+                <div class="thumbnail-box"><video src="v20.mp4" muted loop></video></div>
+                <div class="item-info"><p class="item-title">วิดีโอชื่อ v20</p><p class="item-author">My Channel</p></div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v21.mp4', 'v21')">
+                <div class="thumbnail-box"><video src="v21.mp4" muted loop></video></div>
+                <div class="item-info"><p class="item-title">วิดีโอชื่อ v21</p><p class="item-author">My Channel</p></div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v22.mp4', 'v22')">
+                <div class="thumbnail-box"><video src="v22.mp4" muted loop></video></div>
+                <div class="item-info"><p class="item-title">วิดีโอชื่อ v22</p><p class="item-author">My Channel</p></div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v23.mp4', 'v23')">
+                <div class="thumbnail-box"><video src="v23.mp4" muted loop></video></div>
+                <div class="item-info"><p class="item-title">วิดีโอชื่อ v23</p><p class="item-author">My Channel</p></div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v24.mp4', 'v24')">
+                <div class="thumbnail-box"><video src="v24.mp4" muted loop></video></div>
+                <div class="item-info"><p class="item-title">วิดีโอชื่อ v24</p><p class="item-author">My Channel</p></div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v25.mp4', 'v25')">
+                <div class="thumbnail-box"><video src="v25.mp4" muted loop></video></div>
+                <div class="item-info"><p class="item-title">วิดีโอชื่อ v25</p><p class="item-author">My Channel</p></div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('v26.mp4', 'v26')">
+                <div class="thumbnail-box"><video src="v26.mp4" muted loop></video></div>
+                <div class="item-info"><p class="item-title">วิดีโอชื่อ v26</p><p class="item-author">My Channel</p></div>
             </div>
 
         </aside>
